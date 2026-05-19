@@ -1,0 +1,54 @@
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <h2 class="oe_slogan">Brusnika LMS for Odoo</h2>
+    <h3 class="oe_slogan">Embed your LMS directly inside Odoo. Single Sign-On included.</h3>
+  </div>
+</section>
+
+<section class="oe_container oe_dark">
+  <div class="oe_row oe_spaced">
+    <h2 class="oe_slogan" style="color:#7c3aed;">What this addon does</h2>
+    <div class="oe_span6">
+      <p class="oe_mt32 text-justify">
+        <strong>Brusnika LMS</strong> is an enterprise learning management system by
+        <a href="https://brusnika-lms.com/" target="_blank">Brusnika.Solutions</a>
+        (Estonia-based company). This addon embeds the LMS directly inside Odoo —
+        no tab switching, no separate login required.
+      </p>
+    </div>
+    <div class="oe_span6">
+      <ul>
+        <li><strong>Embedded LMS</strong> — opens as a native section in Odoo via the Learning menu</li>
+        <li><strong>Single Sign-On (SSO)</strong> — employees are logged in automatically via HMAC-signed URL</li>
+        <li><strong>Employee sync</strong> — reads <code>hr.employee</code> and <code>hr.department</code> from Odoo HR</li>
+        <li><strong>Training notifications</strong> — course events logged as <code>mail.activity</code> and chatter entries</li>
+        <li><strong>Calendar sync</strong> — LMS events can be synced with <code>calendar.event</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <h2 class="oe_slogan">How SSO works</h2>
+    <p class="oe_mt32 text-justify">
+      When an employee clicks <em>Open LMS</em> in the Odoo Learning menu, this addon generates
+      a signed URL (HMAC-SHA256). Brusnika LMS validates the signature and logs the employee in
+      automatically — no credentials required on their end.
+    </p>
+  </div>
+</section>
+
+<section class="oe_container oe_dark">
+  <div class="oe_row oe_spaced">
+    <h2 class="oe_slogan">Setup</h2>
+    <ol>
+      <li>Install this addon from apps.odoo.com</li>
+      <li>Go to <strong>Learning → Settings</strong> in Odoo</li>
+      <li>Enter your Brusnika LMS URL and the shared SSO secret</li>
+      <li>In Brusnika LMS admin panel, configure the Odoo connection (URL, DB, API key)</li>
+      <li>Done — employees see the Learning menu with single-click LMS access</li>
+    </ol>
+    <p><strong>Requirements:</strong> Odoo 17.0 · Brusnika LMS subscription · public HTTPS on Odoo instance</p>
+  </div>
+</section>
