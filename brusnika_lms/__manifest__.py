@@ -29,6 +29,7 @@ Features:
         ],
     },
     'images': [
+        'static/description/banner.png',
         'static/description/screenshot_lms_home.png',
         'static/description/screenshot_menu.png',
         'static/description/screenshot_settings.png',
