@@ -14,7 +14,7 @@ Features:
 - Configure LMS URL and shared secret in Brusnika LMS Settings
     """,
     'author': 'Brusnika Solutions',
-    'website': 'https://brusnika-solutions.com',
+    'website': 'https://brusnika-lms.com',
     'license': 'LGPL-3',
     'depends': ['base', 'hr', 'mail', 'web'],
     'data': [
