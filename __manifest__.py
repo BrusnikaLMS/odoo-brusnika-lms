@@ -28,7 +28,11 @@ Features:
             'brusnika_lms/static/src/js/lms_widget.js',
         ],
     },
-    'images': ['static/description/banner.png'],
+    'images': [
+        'static/description/screenshot_course.jpg',
+        'static/description/screenshot_studio.jpg',
+        'static/description/screenshot_lessons.jpg',
+    ],
     'installable': True,
     'application': True,
     'auto_install': False,
