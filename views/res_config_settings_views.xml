@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_brusnika_lms_settings_form" model="ir.ui.view">
+        <field name="name">brusnika.lms.settings.form</field>
+        <field name="model">brusnika.lms.settings</field>
+        <field name="arch" type="xml">
+            <form string="Brusnika LMS Settings">
+                <sheet>
+                    <group string="Connection">
+                        <field name="lms_url" placeholder="https://lms.example.com"/>
+                        <field name="lms_secret" password="True" placeholder="your-secret-key"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Save" type="object" name="execute" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_brusnika_lms_settings" model="ir.actions.act_window">
+        <field name="name">Brusnika LMS Settings</field>
+        <field name="res_model">brusnika.lms.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
