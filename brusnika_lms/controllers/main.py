@@ -28,9 +28,10 @@ class BrusnikaLmsController(http.Controller):
         email       = user.email or ''
         name        = user.name or ''
         ts          = str(int(time.time()))
+        is_admin    = '1' if user.has_group('base.group_system') else '0'
 
-        # HMAC-SHA256 signature: employee_id|email|ts
-        payload = f'{employee_id}|{email}|{ts}'
+        # HMAC-SHA256 signature: employee_id|email|ts|is_admin
+        payload = f'{employee_id}|{email}|{ts}|{is_admin}'
         sig = hmac.new(
             secret.encode('utf-8'),
             payload.encode('utf-8'),
@@ -44,6 +45,7 @@ class BrusnikaLmsController(http.Controller):
             f'&email={quote(email)}'
             f'&name={quote(name)}'
             f'&ts={ts}'
+            f'&is_admin={is_admin}'
             f'&sig={sig}'
             f'#/'
         )
